@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="site.css" />
+    <title>log in</title>
+  </head>
+  <body>
+    <h2>Modal Login Form</h2>
+    <button
+      onclick="document.getElementById('id01').style.display='block'"
+      style="width: auto"
+    >
+      Login
+    </button>
+    <div id="id01" class="modal">
+      <form
+        class="modal-content animate"
+        action="/action_page.php"
+        method="post"
+      >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;
+          </span>
+          <img src="images/Dragonball-Goku.ico" alt="Avatar" class="avatar" />
+        </div>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+          <button type="submit">Login</button>
+          <label class="checkbox-btn">
+            <label for="checkbox">Remember Me</label>
+            <input id="checkbox" type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="container">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+    <script>
+      var modal = document.getElementById("id01");
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+    <button
+      onclick="document.getElementById('id02').style.display='block'"
+      style="width: auto"
+    >
+      Register
+    </button>
+    <div id="id02" class="modal">
+      <form
+        class="modal-content animate"
+        action="/action_page.php"
+        method="post"
+      >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id02').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;
+          </span>
+          <img src="images/Dragonball-Goku.ico" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="container">
+          <label for="fname"><b>First Name</b></label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="First Name"
+            required
+          />
+          <label for="lname"><b>Last Name</b></label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Last Name"
+            required
+          />
+          <label for="email"><b>Mobile_Phone or E-mail</b></label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Mobile Number OR E-mail"
+            required
+          />
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            id="psw"
+            name="psw"
+            placeholder="Enter Password"
+            required
+          />
+          <label for="psw-repeat"><b>Confirm Password</b></label>
+          <input
+            type="password"
+            id="psw-repeat"
+            name="psw-repeat"
+            placeholder="Confirm Password"
+            required
+          />
+          <button type="Submit">Create Account</button>
+        </div>
+        <button
+          type="button"
+          onclick="document.getElementById('id02').style.display='none'"
+          class="cancelbtn"
+        >
+          Cancel
+        </button>
+      </form>
+    </div>
+    <script>
+      var modal = document.getElementById("id02");
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
